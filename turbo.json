@@ -1,0 +1,46 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "env": ["NEXT_PUBLIC_API_URL"],
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "passThroughEnv": [
+        "NEXT_PUBLIC_API_URL",
+        "PORT",
+        "JWT_SECRET",
+        "JWT_EXPIRES_IN",
+        "REFRESH_TOKEN_SECRET",
+        "REFRESH_EXPIRES_IN",
+        "CORS_ORIGIN",
+        "RATE_LIMIT_WINDOW_MS",
+        "RATE_LIMIT_MAX",
+        "ESCROW_PLATFORM_FEE_BPS"
+      ],
+      "persistent": true
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "passThroughEnv": [
+        "NEXT_PUBLIC_API_URL",
+        "PORT",
+        "JWT_SECRET",
+        "JWT_EXPIRES_IN",
+        "REFRESH_TOKEN_SECRET",
+        "REFRESH_EXPIRES_IN",
+        "CORS_ORIGIN",
+        "RATE_LIMIT_WINDOW_MS",
+        "RATE_LIMIT_MAX",
+        "ESCROW_PLATFORM_FEE_BPS"
+      ]
+    }
+  }
+}
