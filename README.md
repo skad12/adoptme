@@ -1,4 +1,4 @@
-# PetCare Hub
+# AdoptMe — Pet & Animal Marketplace
 
 A modern pet and animal management platform designed to connect pet owners, animal lovers, shelters, veterinarians, and adoption agencies.
 
