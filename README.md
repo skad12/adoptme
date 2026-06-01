@@ -50,54 +50,50 @@ The platform provides tools for pet adoption, pet care management, lost-and-foun
 - Analytics and reporting
 - Content management
 
-## Technology Stack
+## Pet Care Focus
 
-### Frontend
+### Adoption Support
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- ShadCN UI
+- Pet discovery by species, breed, age, gender, and location
+- Adoption applications for shelters and rescue organizations
+- Care expectations before a pet joins a new family
+- Transparent records for adopter confidence
 
-### Backend
+### Responsible Breeding
 
-- Node.js
-- Express.js / NestJS
-- REST API
+- Breeder profiles and contact details
+- Parent health, lineage, and socialization notes
+- Vaccination, microchip, and vet-check records
+- Safer handover guidance for new homes
 
-### Database
+### Veterinary Care
 
-- PostgreSQL / MySQL
-- Prisma ORM
+- Clinic discovery and appointment planning
+- Vaccination and wellness reminders
+- Health record summaries
+- Medication and feeding notes
 
-### Authentication
+### Lost & Found
 
-- JWT Authentication
-- OAuth with Google and Facebook
+- Lost pet reports
+- Found pet submissions
+- Matching notifications
+- Location-based search support
 
-### Cloud & Storage
+### Animal Welfare
 
-- Cloudinary
-- AWS S3
+- Shelter donations and rescue campaigns
+- Volunteer registration
+- Education and awareness resources
+- Welfare events and community programs
 
-## Project Structure
+## Pet Journey
 
-```text
-petcare-hub/
-├── apps/
-│   ├── web/                 # Public Website
-│   └── admin/               # Admin Dashboard
-│
-├── packages/
-│   ├── ui/                  # Shared UI Components
-│   ├── types/               # Shared Types
-│   └── config/              # Shared Configurations
-│
-├── docs/
-├── public/
-└── README.md
-```
+1. Discover pets, shelters, breeders, or welfare campaigns.
+2. Review animal profiles, photos, health records, and care needs.
+3. Contact the owner, shelter, breeder, or veterinarian.
+4. Submit adoption forms, schedule visits, or arrange handovers.
+5. Continue tracking vaccinations, feeding, medical updates, and pet milestones.
 
 ## User Roles
 
@@ -132,52 +128,35 @@ petcare-hub/
 - User and content management
 - Analytics and reporting
 
-## Installation
+## Getting Started
 
-### Clone Repository
+### For Pet Owners
 
-```bash
-git clone https://github.com/your-username/petcare-hub.git
-```
+- Create a profile for each pet
+- Add vaccination, microchip, diet, and medical details
+- Track appointments and daily care routines
+- Report lost or found pets when needed
 
-### Navigate to Project
+### For Adopters
 
-```bash
-cd petcare-hub
-```
+- Browse available adoption listings
+- Compare temperament, age, health, and home-fit notes
+- Submit applications with household and care details
+- Follow shelter updates and handover steps
 
-### Install Dependencies
+### For Shelters and Breeders
 
-```bash
-npm install
-```
-
-### Configure Environment
-
-Create a `.env` file:
-
-```env
-DATABASE_URL=
-NEXT_PUBLIC_API_URL=
-JWT_SECRET=
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-```
-
-### Run Development Server
-
-```bash
-npm run dev
-```
-
-Application will be available at [http://localhost:3000](http://localhost:3000).
+- Publish accurate animal listings
+- Share care records, photos, and compatibility notes
+- Review inquiries and applications
+- Coordinate safe visits, transport, and transitions
 
 ## Core Modules
 
 | Module | Description |
 |--------|-------------|
 | Adoption | Pet adoption workflow |
+| Breeding | Responsible breeder profiles and handover guidance |
 | Pet Profiles | Animal information management |
 | Veterinary | Health and appointment management |
 | Donations | Online donations and fundraising |
@@ -195,28 +174,13 @@ Application will be available at [http://localhost:3000](http://localhost:3000).
 - Community forums
 - Emergency rescue alerts
 
-## Contributing
+## How To Help
 
-1. Fork the repository.
-2. Create a feature branch:
-
-   ```bash
-   git checkout -b feature/new-feature
-   ```
-
-3. Commit changes:
-
-   ```bash
-   git commit -m "Add new feature"
-   ```
-
-4. Push branch:
-
-   ```bash
-   git push origin feature/new-feature
-   ```
-
-5. Open a Pull Request.
+- Share verified animal welfare resources
+- Volunteer with shelters and rescue organizations
+- Donate to emergency medical and transport campaigns
+- Promote responsible breeding and adoption practices
+- Report inaccurate listings or unsafe handover requests
 
 ## License
 

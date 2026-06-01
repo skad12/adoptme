@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const dataFile = fileURLToPath(new URL("../../data/db.json", import.meta.url));
 
 export type Role = "BUYER" | "SELLER" | "ADOPTER" | "DONOR" | "ADMIN" | "MODERATOR";
-export type ListingType = "SALE" | "EXCHANGE" | "ADOPTION";
+export type ListingType = "SALE" | "EXCHANGE" | "ADOPTION" | "BREEDING";
 export type ListingStatus = "ACTIVE" | "PENDING_REVIEW" | "PAUSED" | "SOLD" | "REMOVED";
 export type UserStatus = "ACTIVE" | "SUSPENDED" | "DELETED";
 

@@ -8,7 +8,7 @@ export const listingsRouter: ExpressRouter = Router();
 
 const querySchema = z.object({
   q: z.string().optional(),
-  type: z.enum(["SALE", "EXCHANGE", "ADOPTION"]).optional(),
+  type: z.enum(["SALE", "EXCHANGE", "ADOPTION", "BREEDING"]).optional(),
   category: z.string().optional(),
   sort: z.enum(["newest", "price_asc", "price_desc"]).default("newest"),
   page: z.coerce.number().min(1).default(1),
