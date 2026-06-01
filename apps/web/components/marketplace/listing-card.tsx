@@ -9,12 +9,19 @@ function formatMoney(cents: number | null, currency: string) {
   return new Intl.NumberFormat(undefined, { style: "currency", currency }).format(cents / 100);
 }
 
+function listingTypeLabel(type: ListingSummary["type"]) {
+  if (type === "SALE") return "Sale";
+  if (type === "EXCHANGE") return "Exchange";
+  if (type === "BREEDING") return "Breeding";
+  return "Adoption";
+}
+
 export function ListingCard({ listing }: { listing: ListingSummary }) {
   const img = listing.images[0]?.url;
   return (
     <Card className="group overflow-hidden p-0">
       <Link href={`/pets/${listing.id}`} className="block">
-        <div className="relative aspect-[4/3] bg-zinc-100 dark:bg-zinc-900">
+        <div className="relative aspect-4/3 bg-zinc-100 dark:bg-zinc-900">
           {img ? (
             <Image
               src={img}
@@ -25,7 +32,7 @@ export function ListingCard({ listing }: { listing: ListingSummary }) {
             />
           ) : null}
           <div className="absolute left-3 top-3 flex gap-2">
-            <Badge>{listing.type === "SALE" ? "Sale" : listing.type === "EXCHANGE" ? "Exchange" : "Adoption"}</Badge>
+            <Badge>{listingTypeLabel(listing.type)}</Badge>
           </div>
         </div>
         <div className="space-y-2 p-4">

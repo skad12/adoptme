@@ -24,6 +24,7 @@ export function MarketplaceToolbar({ query = {} }: Props) {
   const types: { id?: string; label: string }[] = [
     { id: undefined, label: "All" },
     { id: "SALE", label: "Buy / Sell" },
+    { id: "BREEDING", label: "Breeding Animals" },
     { id: "EXCHANGE", label: "Exchange" },
     { id: "ADOPTION", label: "Adoption" },
   ];

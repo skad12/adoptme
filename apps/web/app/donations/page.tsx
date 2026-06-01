@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { fetchDonationCampaigns } from "@/lib/api";
+import { fetchDonationCampaigns } from "@/lib/listing-data";
 import { Card } from "@/components/ui/card";
 
 function money(cents: number | null) {
@@ -15,13 +15,13 @@ export default async function DonationsPage() {
       <div className="space-y-4">
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Donations</h1>
         <p className="max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          Donation checkout integrates with a payment provider session (stubbed in the starter API). Completed webhooks should mark donations and increment campaign totals idempotently.
+          Support shelters, rescue transport, emergency veterinary care, food drives, and animal welfare campaigns that help pets reach safer homes.
         </p>
       </div>
       <div className="grid gap-6 md:grid-cols-2">
         {items.length === 0 ? (
           <p className="col-span-full rounded-2xl border border-dashed border-zinc-300 p-8 text-sm text-zinc-600 dark:border-zinc-700 dark:text-zinc-400">
-            No active campaigns loaded. Start the API, or check <code className="rounded bg-zinc-100 px-1 text-xs dark:bg-zinc-900">NEXT_PUBLIC_API_URL</code>.
+            No active campaigns are available right now. Please check back for new shelter and rescue fundraisers.
           </p>
         ) : null}
         {items.map((c) => {
@@ -48,7 +48,7 @@ export default async function DonationsPage() {
                 href={`/support?topic=donate&campaign=${c.id}`}
                 className="inline-flex h-10 items-center justify-center rounded-lg bg-emerald-600 px-4 text-sm font-semibold text-white hover:bg-emerald-700"
               >
-                Donate (wire PSP)
+                Donate to this cause
               </Link>
             </Card>
           );

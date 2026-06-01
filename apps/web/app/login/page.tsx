@@ -18,7 +18,7 @@ export default function LoginPage() {
           </p>
           <h1 className="text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">Login to manage your listings and messages.</h1>
           <p className="max-w-xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-            This starter keeps authentication lightweight. Use the demo accounts from the JSON store while you wire production sessions later.
+            Sign in to follow pet inquiries, adoption applications, breeder conversations, donation updates, and care handover messages.
           </p>
         </div>
         <Card className="space-y-5">
@@ -43,7 +43,7 @@ export default function LoginPage() {
             </Link>
           </form>
           <p className="text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">
-            Production login should exchange credentials with <code>/v1/auth/login</code>, store the token securely, and use it for protected API calls.
+            Use account access to keep pet records, contact details, and family conversations organized in one place.
           </p>
         </Card>
       </div>

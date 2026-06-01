@@ -61,6 +61,11 @@ export function SiteFooter() {
                 Adoption
               </Link>
             </li>
+            <li>
+              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace?type=BREEDING">
+                Breeding animals
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
@@ -82,7 +87,7 @@ export function SiteFooter() {
         </div>
       </div>
       <p className="mx-auto mt-8 max-w-6xl px-4 text-xs text-zinc-500 sm:px-6">
-        Escrow, compliance, and animal welfare rules vary by region. AdoptMe starter code is a foundation — engage legal counsel before launch.
+        Animal welfare, breeding, adoption, and transfer rules vary by region. Always confirm local guidance before bringing a pet home.
       </p>
     </footer>
   );

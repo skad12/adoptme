@@ -3,7 +3,7 @@ import { getPublicApiBaseUrl } from "./env";
 export type ListingSummary = {
   id: string;
   title: string;
-  type: "SALE" | "EXCHANGE" | "ADOPTION";
+  type: "SALE" | "EXCHANGE" | "ADOPTION" | "BREEDING";
   priceCents: number | null;
   currency: string;
   city: string | null;
@@ -66,7 +66,7 @@ export type ListingDetail = {
   id: string;
   title: string;
   description: string;
-  type: "SALE" | "EXCHANGE" | "ADOPTION";
+  type: "SALE" | "EXCHANGE" | "ADOPTION" | "BREEDING";
   priceCents: number | null;
   currency: string;
   city: string | null;

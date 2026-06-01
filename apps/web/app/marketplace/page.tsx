@@ -2,11 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { ListingCard } from "@/components/marketplace/listing-card";
 import { MarketplaceToolbar } from "@/components/marketplace/marketplace-toolbar";
-import { fetchListings } from "@/lib/api";
+import { fetchListings } from "@/lib/listing-data";
 
 export const metadata: Metadata = {
   title: "Marketplace",
-  description: "Search and filter pet listings — sales, exchanges, and adoptions with escrow-aware checkout.",
+  description: "Search and filter pet listings, including sales, exchanges, adoptions, and responsible breeding.",
 };
 
 type SearchParams = Record<string, string | string[] | undefined>;
@@ -40,7 +40,7 @@ export default async function MarketplacePage({ searchParams }: { searchParams: 
       <div className="space-y-3">
         <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Marketplace</h1>
         <p className="max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-          Browse verified-style listings with advanced filters. Escrow protects purchases and exchanges; adoption listings follow a separate application flow.
+          Browse pet listings with filters for dogs, cats, birds, breeding, sales, exchanges, and adoptions. Review care notes before you contact a family, shelter, or breeder.
         </p>
       </div>
 
@@ -49,7 +49,7 @@ export default async function MarketplacePage({ searchParams }: { searchParams: 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data.items.length === 0 ? (
           <p className="col-span-full rounded-2xl border border-dashed border-zinc-300 p-10 text-center text-sm text-zinc-500 dark:border-zinc-700">
-            No listings yet. Start the API to load demo data from the local JSON store.
+            No listings match these filters yet. Try another pet category, search term, or listing type.
           </p>
         ) : (
           data.items.map((l) => <ListingCard key={l.id} listing={l} />)

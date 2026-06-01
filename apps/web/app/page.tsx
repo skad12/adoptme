@@ -1,18 +1,16 @@
 import Link from "next/link";
-import { ArrowRight, HeartHandshake, Repeat2, ShieldCheck, ShoppingBag, Sparkles, UploadCloud } from "lucide-react";
+import { ArrowRight, HeartHandshake, PawPrint, Repeat2, ShieldCheck, ShoppingBag, Sparkles, UploadCloud, type LucideIcon } from "lucide-react";
 import { HeroVideoMontage } from "@/components/marketing/hero-video-montage";
 import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const btnPrimary =
   "inline-flex h-11 items-center justify-center rounded-full bg-emerald-600 px-6 text-sm font-semibold text-white shadow-sm shadow-emerald-600/25 transition hover:bg-emerald-700";
-const btnOutline =
-  "inline-flex h-11 items-center justify-center rounded-full border border-zinc-300 bg-transparent px-6 text-sm font-semibold text-zinc-900 transition hover:bg-zinc-50 dark:border-zinc-700 dark:text-zinc-50 dark:hover:bg-zinc-900";
 
 const pillars = [
   {
-    title: "Escrow-protected commerce",
-    body: "Purchase and exchange flows settle through a documented escrow state machine with dispute hooks.",
+    title: "Welfare-first pet care",
+    body: "Listings highlight care history, health notes, temperament, and the home environment each animal needs.",
     icon: ShieldCheck,
   },
   {
@@ -21,19 +19,82 @@ const pillars = [
     icon: HeartHandshake,
   },
   {
-    title: "Built to scale globally",
-    body: "Stateless API routes and clean modular boundaries ready for a real database, search replicas, and async workers.",
+    title: "Support for every journey",
+    body: "Families, shelters, veterinarians, breeders, and donors can work from one pet-focused hub.",
     icon: Sparkles,
   },
 ];
 
-const marketplacePaths = [
+const heroSlides = [
+  {
+    eyebrow: "Pet care, adoption, and trusted animal listings",
+    title: "The trusted marketplace for animals, adopters, and donors.",
+    body: "AdoptMe helps families discover healthy pets, support rescues, connect with responsible breeders, and follow safer handover steps from first message to forever home.",
+    primaryHref: "/marketplace",
+    primaryLabel: "Explore marketplace",
+    secondaryHref: "/donations",
+    secondaryLabel: "Support welfare causes",
+  },
+  {
+    eyebrow: "Responsible breeding animals",
+    title: "Find breeder listings with health records and care notes.",
+    body: "Browse pets from responsible breeders with parent history, early socialization, vaccination records, and clear handover expectations.",
+    primaryHref: "/marketplace?type=BREEDING",
+    primaryLabel: "View breeding listings",
+    secondaryHref: "/sell",
+    secondaryLabel: "Create breeder listing",
+  },
+  {
+    eyebrow: "Adoption-first matching",
+    title: "Help rescue pets find safer forever homes.",
+    body: "Review adoption profiles, temperament notes, medical needs, and household fit before starting a shelter application.",
+    primaryHref: "/marketplace?type=ADOPTION",
+    primaryLabel: "Find adoptable pets",
+    secondaryHref: "/adoption",
+    secondaryLabel: "Learn adoption steps",
+  },
+  {
+    eyebrow: "Pet health and care records",
+    title: "Bring every care detail into the conversation.",
+    body: "Compare vaccination status, microchip details, medication notes, training level, compatibility, and diet before arranging a handover.",
+    primaryHref: "/marketplace",
+    primaryLabel: "Browse pet profiles",
+    secondaryHref: "/sell",
+    secondaryLabel: "List with care records",
+  },
+  {
+    eyebrow: "Animal welfare community",
+    title: "Support shelters, rescuers, and pet families.",
+    body: "Discover donation campaigns, lost-and-found support, volunteer opportunities, and education resources that protect animals beyond the marketplace.",
+    primaryHref: "/donations",
+    primaryLabel: "Donate to shelters",
+    secondaryHref: "/support",
+    secondaryLabel: "Visit help center",
+  },
+];
+
+type MarketplacePath = {
+  title: string;
+  href: string;
+  cta: string;
+  icon: LucideIcon;
+  body: string;
+};
+
+const marketplacePaths: MarketplacePath[] = [
   {
     title: "Buy / sell",
     href: "/marketplace?type=SALE",
     cta: "Browse sale listings",
     icon: ShoppingBag,
-    body: "Create structured listings with price, animal profile, health notes, vaccination status, microchip details, photos, and seller contact fields.",
+    body: "Create structured sale listings with price, animal profile, health notes, vaccination status, microchip details, photos, and seller contact fields.",
+  },
+  {
+    title: "Breeding animals",
+    href: "/marketplace?type=BREEDING",
+    cta: "View breeding animals",
+    icon: PawPrint,
+    body: "Responsible breeding listings focus on parent health, lineage notes, early socialization, and care commitments for new homes.",
   },
   {
     title: "Exchange",
@@ -61,45 +122,50 @@ const listingSteps = [
 export default function HomePage() {
   return (
     <div>
-      <section className="relative overflow-hidden border-b border-zinc-200/80 bg-linear-to-b from-emerald-50/60 via-white to-white dark:border-zinc-800/80 dark:from-emerald-950/30 dark:via-zinc-950 dark:to-zinc-950">
-        <div className="pointer-events-none absolute inset-x-0 -top-40 h-80 bg-[radial-gradient(circle_at_top,rgb(16_185_129/0.35),transparent_55%)] dark:bg-[radial-gradient(circle_at_top,rgb(16_185_129/0.25),transparent_60%)]" />
-        <div className="relative mx-auto flex max-w-6xl flex-col gap-10 px-4 py-20 sm:px-6 lg:flex-row lg:items-center lg:py-24">
-          <div className="flex-1 space-y-6">
-            <p className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-3 py-1 text-xs font-medium text-emerald-900 shadow-sm backdrop-blur dark:border-emerald-900/50 dark:bg-zinc-950/60 dark:text-emerald-200">
-              Enterprise starter · TypeScript everywhere
-            </p>
-            <h1 className="text-balance text-4xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50 sm:text-5xl lg:text-6xl">
-              The trusted marketplace for animals, adopters, and donors.
-            </h1>
-            <p className="max-w-xl text-pretty text-base leading-relaxed text-zinc-600 dark:text-zinc-400 sm:text-lg">
-              AdoptMe pairs a premium Next.js storefront with a hardened Express API, structured JSON content, and payment flows designed for serious operators.
-            </p>
-            <div className="flex flex-wrap gap-3">
-              <Link href="/marketplace" className={cn(btnPrimary, "gap-2")}>
-                Explore marketplace
-                <ArrowRight className="h-4 w-4" aria-hidden />
-              </Link>
-              <Link href="/donations" className={btnOutline}>
-                Support welfare causes
-              </Link>
+      <section className="relative min-h-[720px] overflow-hidden bg-zinc-950 text-white">
+        <HeroVideoMontage />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgb(16_185_129/0.34),transparent_34%),linear-gradient(90deg,rgb(3_7_18/0.88),rgb(3_7_18/0.54)_48%,rgb(3_7_18/0.26)),linear-gradient(to_top,rgb(3_7_18/0.86),transparent_48%)]" />
+        <div className="relative mx-auto flex min-h-[720px] max-w-7xl items-center px-4 py-24 sm:px-6 lg:py-28">
+          <div className="w-full max-w-3xl">
+            <div className="hero-content-slider relative min-h-[430px]">
+              {heroSlides.map((slide, index) => (
+                <div key={slide.title} className="hero-content-slide absolute inset-0 flex flex-col justify-center space-y-6" style={{ animationDelay: `${index * 8}s` }}>
+                  <p className="inline-flex w-fit items-center gap-2 rounded-full border border-white/20 bg-white/12 px-3 py-1 text-xs font-medium text-emerald-100 shadow-sm backdrop-blur">
+                    {slide.eyebrow}
+                  </p>
+                  <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">{slide.title}</h1>
+                  <p className="max-w-2xl text-pretty text-base leading-relaxed text-zinc-100 sm:text-lg">{slide.body}</p>
+                  <div className="flex flex-wrap gap-3">
+                    <Link href={slide.primaryHref} className={cn(btnPrimary, "gap-2")}>
+                      {slide.primaryLabel}
+                      <ArrowRight className="h-4 w-4" aria-hidden />
+                    </Link>
+                    <Link href={slide.secondaryHref} className="inline-flex h-11 items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20">
+                      {slide.secondaryLabel}
+                    </Link>
+                  </div>
+                  {/* <dl className="grid max-w-lg grid-cols-3 gap-4 pt-4 text-xs text-zinc-200">
+                    <div>
+                      <dt className="font-medium text-white">Community</dt>
+                      <dd className="mt-1">Owners, adopters, shelters, donors.</dd>
+                    </div>
+                    <div>
+                      <dt className="font-medium text-white">Care</dt>
+                      <dd className="mt-1">Vaccines, microchips, vet notes.</dd>
+                    </div>
+                    <div>
+                      <dt className="font-medium text-white">Trust</dt>
+                      <dd className="mt-1">Clear records and safer handovers.</dd>
+                    </div>
+                  </dl> */}
+                </div>
+              ))}
             </div>
-            <dl className="grid max-w-lg grid-cols-3 gap-4 pt-4 text-xs text-zinc-500 dark:text-zinc-400">
-              <div>
-                <dt className="font-medium text-zinc-800 dark:text-zinc-200">Roles</dt>
-                <dd className="mt-1">Buyers, sellers, adopters, donors, admins.</dd>
-              </div>
-              <div>
-                <dt className="font-medium text-zinc-800 dark:text-zinc-200">Security</dt>
-                <dd className="mt-1">RBAC, audit logs, rate limits, Helmet.</dd>
-              </div>
-              <div>
-                <dt className="font-medium text-zinc-800 dark:text-zinc-200">Data</dt>
-                <dd className="mt-1">Local JSON starter data.</dd>
-              </div>
-            </dl>
-          </div>
-          <div className="flex-1 motion-float">
-            <HeroVideoMontage />
+            <div className="mt-6 flex gap-2">
+              {heroSlides.map((slide, index) => (
+                <span key={slide.title} className="hero-content-tick h-1.5 w-12 rounded-full bg-white/25" style={{ animationDelay: `${index * 8}s` }} />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -115,7 +181,7 @@ export default function HomePage() {
             <UploadCloud className="h-4 w-4" />
           </Link>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {marketplacePaths.map((path) => (
             <Card key={path.title} className="group flex flex-col justify-between gap-6">
               <div className="space-y-3">
@@ -138,9 +204,9 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">Responsible uploads</p>
-            <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">A better seller form for serious pet listings.</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">A better pet profile for thoughtful listings.</h2>
             <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              The sell page asks for the information buyers and moderators need before money, adoption applications, or exchanges enter the conversation.
+              The listing flow asks for the details families need before a sale, adoption application, exchange, or breeder conversation moves forward.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -157,9 +223,9 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl space-y-8 px-4 py-16 sm:px-6">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Why teams pick this foundation</h2>
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Why pet communities choose AdoptMe</h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
-              Every surface — from RBAC to disputes — is modeled so you can grow into subscriptions, vet telehealth, insurance, and logistics without rewriting core flows.
+              Every surface is shaped around animal welfare, clearer records, safer conversations, and stronger support for families bringing pets home.
             </p>
           </div>
         </div>

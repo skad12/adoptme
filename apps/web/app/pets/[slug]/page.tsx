@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { fetchListing } from "@/lib/api";
+import { fetchListing } from "@/lib/listing-data";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -23,6 +23,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 function money(cents: number | null, currency: string) {
   if (cents == null) return "Contact for details";
   return new Intl.NumberFormat(undefined, { style: "currency", currency }).format(cents / 100);
+}
+
+function listingTypeLabel(type: "SALE" | "EXCHANGE" | "ADOPTION" | "BREEDING") {
+  if (type === "SALE") return "For sale";
+  if (type === "EXCHANGE") return "Exchange";
+  if (type === "BREEDING") return "Breeding animal";
+  return "Adoption";
 }
 
 function age(months: number | null | undefined) {
@@ -74,7 +81,7 @@ export default async function PetDetailPage({ params }: PageProps) {
     <div className="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6">
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
         <div className="space-y-4">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
+          <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
             {hero ? (
               <Image
                 src={hero}
@@ -99,7 +106,7 @@ export default async function PetDetailPage({ params }: PageProps) {
 
         <div className="space-y-6">
           <div className="flex flex-wrap gap-2">
-            <Badge>{listing.type === "SALE" ? "For sale" : listing.type === "EXCHANGE" ? "Exchange" : "Adoption"}</Badge>
+            <Badge>{listingTypeLabel(listing.type)}</Badge>
             {listing.seller?.sellerProfile?.verificationTier && listing.seller.sellerProfile.verificationTier !== "NONE" ? (
               <Badge className="border-indigo-200 bg-indigo-50 text-indigo-900 dark:border-indigo-900/60 dark:bg-indigo-950/50 dark:text-indigo-100">
                 Verified seller tier: {listing.seller.sellerProfile.verificationTier.toLowerCase()}
@@ -118,6 +125,8 @@ export default async function PetDetailPage({ params }: PageProps) {
             <p className="text-xs text-emerald-900/80 dark:text-emerald-100/80">
               {listing.type === "ADOPTION"
                 ? "Adoption listings use an application workflow instead of cart checkout."
+                : listing.type === "BREEDING"
+                  ? "Breeding listings use direct inquiry so families can review parent health, lineage, and care expectations first."
                 : "Checkout uses escrow-backed settlement — funds move in phases with dispute windows."}
             </p>
           </Card>
@@ -138,6 +147,13 @@ export default async function PetDetailPage({ params }: PageProps) {
                 className="inline-flex h-11 items-center justify-center rounded-xl bg-emerald-600 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700"
               >
                 Start adoption application
+              </Link>
+            ) : listing.type === "BREEDING" ? (
+              <Link
+                href={`/support?topic=breeding&listingId=${listing.id}`}
+                className="inline-flex h-11 items-center justify-center rounded-xl bg-emerald-600 text-sm font-semibold text-white shadow-sm hover:bg-emerald-700"
+              >
+                Ask about breeding records
               </Link>
             ) : (
               <Link
