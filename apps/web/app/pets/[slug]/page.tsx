@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { SafeImage } from "@/components/ui/safe-image";
 import { fetchListing } from "@/lib/listing-data";
+import { formatMoney } from "@/lib/money";
 
 type PageProps = { params: Promise<{ slug: string }> };
 
@@ -20,10 +21,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-function money(cents: number | null, currency: string) {
-  if (cents == null) return "Contact for details";
-  return new Intl.NumberFormat(undefined, { style: "currency", currency }).format(cents / 100);
-}
 
 function listingTypeLabel(type: "SALE" | "EXCHANGE" | "ADOPTION" | "BREEDING") {
   if (type === "SALE") return "For sale";
@@ -83,12 +80,12 @@ export default async function PetDetailPage({ params }: PageProps) {
         <div className="space-y-4">
           <div className="relative aspect-4/3 overflow-hidden rounded-3xl border border-zinc-200 bg-zinc-100 dark:border-zinc-800 dark:bg-zinc-900">
             {hero ? (
-              <Image
+              <SafeImage
                 src={hero}
                 alt={listing.title}
                 fill
                 priority
-                className="object-cover"
+                className="transition duration-500 hover:scale-[1.02]"
                 sizes="(max-width:1024px) 100vw, 55vw"
               />
             ) : null}
@@ -97,7 +94,7 @@ export default async function PetDetailPage({ params }: PageProps) {
             <div className="grid grid-cols-4 gap-2">
               {images.slice(1, 5).map((im) => (
                 <div key={im.url} className="relative aspect-square overflow-hidden rounded-xl border border-zinc-200 dark:border-zinc-800">
-                  <Image src={im.url} alt={`${listing.title} — photo`} fill className="object-cover" sizes="(max-width:768px) 25vw, 10vw" />
+                  <SafeImage src={im.url} alt={`${listing.title} — photo`} fill sizes="(max-width:768px) 25vw, 10vw" />
                 </div>
               ))}
             </div>
@@ -121,7 +118,7 @@ export default async function PetDetailPage({ params }: PageProps) {
           </div>
           <Card className="space-y-3 border-emerald-100/80 bg-emerald-50/40 p-5 dark:border-emerald-900/40 dark:bg-emerald-950/30">
             <p className="text-xs font-semibold uppercase tracking-wide text-emerald-800 dark:text-emerald-200">Pricing</p>
-            <p className="text-3xl font-semibold text-emerald-900 dark:text-emerald-100">{money(listing.priceCents, listing.currency)}</p>
+            <p className="text-3xl font-semibold text-emerald-900 dark:text-emerald-100">{formatMoney(listing.priceCents, listing.currency)}</p>
             <p className="text-xs text-emerald-900/80 dark:text-emerald-100/80">
               {listing.type === "ADOPTION"
                 ? "Adoption listings use an application workflow instead of cart checkout."

@@ -1,0 +1,225 @@
+{
+  "ownerPets": [
+    {
+      "id": "opet_luna",
+      "ownerId": "user_buyer",
+      "name": "Luna",
+      "species": "Dog",
+      "breed": "Golden Retriever",
+      "birthdate": "2023-04-12",
+      "weightKg": 24.5,
+      "microchipId": "985112004455667",
+      "imageUrl": "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=400&q=80",
+      "vaccinations": [
+        { "id": "vax_luna_1", "vaccineName": "Rabies", "dateGiven": "2025-08-10", "nextDue": "2026-08-10" },
+        { "id": "vax_luna_2", "vaccineName": "DHPP", "dateGiven": "2025-09-01", "nextDue": "2026-09-01" }
+      ],
+      "weightHistory": [21.2, 22.0, 22.8, 23.4, 24.0, 24.5]
+    },
+    {
+      "id": "opet_milo",
+      "ownerId": "user_buyer",
+      "name": "Milo",
+      "species": "Cat",
+      "breed": "Domestic Shorthair",
+      "birthdate": "2024-01-20",
+      "weightKg": 4.1,
+      "microchipId": "985112009988776",
+      "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&q=80",
+      "vaccinations": [
+        { "id": "vax_milo_1", "vaccineName": "FVRCP", "dateGiven": "2025-11-15", "nextDue": "2026-07-20" }
+      ],
+      "weightHistory": [3.2, 3.4, 3.6, 3.8, 4.0, 4.1]
+    },
+    {
+      "id": "opet_pip",
+      "ownerId": "user_buyer",
+      "name": "Pip",
+      "species": "Bird",
+      "breed": "Cockatiel",
+      "birthdate": "2024-06-01",
+      "weightKg": 0.09,
+      "microchipId": null,
+      "imageUrl": "https://images.unsplash.com/photo-1444464666168-49d633b86797?w=400&q=80",
+      "vaccinations": [],
+      "weightHistory": [0.08, 0.085, 0.088, 0.09, 0.091, 0.09]
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt_1",
+      "petId": "opet_luna",
+      "petName": "Luna",
+      "vetName": "Dr. Ada Okonkwo",
+      "appointmentDate": "2026-07-18T10:00:00.000Z",
+      "type": "in-person",
+      "status": "confirmed",
+      "notes": "Annual checkup and vaccine review"
+    },
+    {
+      "id": "appt_2",
+      "petId": "opet_milo",
+      "petName": "Milo",
+      "vetName": "Dr. James Mensah",
+      "appointmentDate": "2026-07-21T15:30:00.000Z",
+      "type": "tele",
+      "status": "pending",
+      "notes": "Itching after new litter"
+    },
+    {
+      "id": "appt_3",
+      "petId": "opet_luna",
+      "petName": "Luna",
+      "vetName": "Dr. Ada Okonkwo",
+      "appointmentDate": "2026-06-02T09:00:00.000Z",
+      "type": "in-person",
+      "status": "completed",
+      "notes": "Dental cleaning follow-up"
+    },
+    {
+      "id": "appt_4",
+      "petId": "opet_pip",
+      "petName": "Pip",
+      "vetName": "Dr. Sarah Bello",
+      "appointmentDate": "2026-07-25T11:00:00.000Z",
+      "type": "tele",
+      "status": "confirmed",
+      "notes": "Wing trim guidance"
+    },
+    {
+      "id": "appt_5",
+      "petId": "opet_milo",
+      "petName": "Milo",
+      "vetName": "Dr. James Mensah",
+      "appointmentDate": "2026-05-14T13:00:00.000Z",
+      "type": "in-person",
+      "status": "completed",
+      "notes": "Vaccine booster"
+    }
+  ],
+  "customerOrders": [
+    {
+      "id": "cord_1",
+      "title": "Grain-free dog kibble (5kg)",
+      "status": "shipped",
+      "amountMinor": 2850000,
+      "createdAt": "2026-07-08T12:00:00.000Z"
+    },
+    {
+      "id": "cord_2",
+      "title": "Cat litter & toys bundle",
+      "status": "delivered",
+      "amountMinor": 1420000,
+      "createdAt": "2026-06-28T09:20:00.000Z"
+    },
+    {
+      "id": "cord_3",
+      "title": "Bird enrichment perch kit",
+      "status": "processing",
+      "amountMinor": 680000,
+      "createdAt": "2026-07-12T16:40:00.000Z"
+    }
+  ],
+  "customerMessages": [
+    {
+      "id": "cmsg_1",
+      "from": "Trusted Pet Shop",
+      "preview": "Your kibble order ships tomorrow.",
+      "createdAt": "2026-07-13T08:10:00.000Z",
+      "unread": true
+    },
+    {
+      "id": "cmsg_2",
+      "from": "Dr. Ada Okonkwo",
+      "preview": "Please bring Luna's previous vaccine card.",
+      "createdAt": "2026-07-12T18:05:00.000Z",
+      "unread": true
+    },
+    {
+      "id": "cmsg_3",
+      "from": "AdoptMe Support",
+      "preview": "Thanks for your shelter donation!",
+      "createdAt": "2026-07-10T11:00:00.000Z",
+      "unread": false
+    }
+  ],
+  "customerSummary": {
+    "spendMinorThisMonth": 4950000,
+    "loyaltyPoints": 1850,
+    "donationImpactMinor": 2500000,
+    "subscriptionsActive": 1,
+    "upcomingVaccines": 2
+  },
+  "vendorSummary": {
+    "revenueMinor": 14850000,
+    "ordersPending": 4,
+    "ordersFulfilled": 28,
+    "conversionRate": 3.8,
+    "ratingAvg": 4.7,
+    "responseMinutes": 18,
+    "salesByDay": [220, 180, 310, 290, 420, 360, 410]
+  },
+  "vendorProducts": [
+    { "id": "vp_1", "name": "Organic Dog Treats", "stock": 42, "priceMinor": 129900, "status": "active" },
+    { "id": "vp_2", "name": "Cat Scratch Tower", "stock": 8, "priceMinor": 459900, "status": "active" },
+    { "id": "vp_3", "name": "Bird Seed Mix 2kg", "stock": 3, "priceMinor": 189900, "status": "low_stock" },
+    { "id": "vp_4", "name": "Grooming Brush Set", "stock": 0, "priceMinor": 99900, "status": "out_of_stock" },
+    { "id": "vp_5", "name": "Puppy Starter Kit", "stock": 15, "priceMinor": 699900, "status": "active" }
+  ],
+  "vendorOrders": [
+    { "id": "vord_1", "buyer": "Ada N.", "items": 2, "amountMinor": 589800, "status": "pending", "createdAt": "2026-07-13T10:00:00.000Z" },
+    { "id": "vord_2", "buyer": "Chidi O.", "items": 1, "amountMinor": 459900, "status": "fulfilled", "createdAt": "2026-07-12T14:20:00.000Z" },
+    { "id": "vord_3", "buyer": "Fatima B.", "items": 3, "amountMinor": 918700, "status": "pending", "createdAt": "2026-07-12T09:05:00.000Z" },
+    { "id": "vord_4", "buyer": "James K.", "items": 1, "amountMinor": 189900, "status": "shipped", "createdAt": "2026-07-11T17:40:00.000Z" },
+    { "id": "vord_5", "buyer": "Ruth M.", "items": 2, "amountMinor": 799800, "status": "fulfilled", "createdAt": "2026-07-10T11:15:00.000Z" }
+  ],
+  "vendorPayouts": [
+    { "id": "pay_1", "period": "Jun 2026", "amountMinor": 5200000, "status": "paid" },
+    { "id": "pay_2", "period": "Jul 2026 (MTD)", "amountMinor": 3100000, "status": "pending" }
+  ],
+  "vetSummary": {
+    "consultsThisMonth": 36,
+    "patientLoad": 22,
+    "averageRating": 4.9,
+    "prescriptionsIssued": 18,
+    "earningsMinor": 8750000
+  },
+  "vetSchedule": [
+    { "id": "vs_1", "petName": "Luna", "ownerName": "Demo Buyer", "at": "2026-07-18T10:00:00.000Z", "type": "in-person", "status": "confirmed" },
+    { "id": "vs_2", "petName": "Milo", "ownerName": "Demo Buyer", "at": "2026-07-18T11:30:00.000Z", "type": "tele", "status": "confirmed" },
+    { "id": "vs_3", "petName": "Scout", "ownerName": "Chidi O.", "at": "2026-07-19T09:00:00.000Z", "type": "in-person", "status": "pending" },
+    { "id": "vs_4", "petName": "Nala", "ownerName": "Ada N.", "at": "2026-07-19T14:00:00.000Z", "type": "tele", "status": "confirmed" }
+  ],
+  "vetPatients": [
+    { "id": "vp_luna", "name": "Luna", "species": "Dog", "ownerName": "Demo Buyer", "lastVisit": "2026-06-02", "imageUrl": "https://images.unsplash.com/photo-1633722715463-d30f4f325e24?w=400&q=80" },
+    { "id": "vp_milo", "name": "Milo", "species": "Cat", "ownerName": "Demo Buyer", "lastVisit": "2026-05-14", "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&q=80" },
+    { "id": "vp_scout", "name": "Scout", "species": "Dog", "ownerName": "Chidi O.", "lastVisit": "2026-04-20", "imageUrl": "https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&q=80" },
+    { "id": "vp_nala", "name": "Nala", "species": "Cat", "ownerName": "Ada N.", "lastVisit": "2026-07-01", "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80" }
+  ],
+  "vetPrescriptions": [
+    { "id": "rx_1", "petName": "Luna", "medication": "Rimadyl 75mg", "dosage": "1 tab daily with food", "issuedAt": "2026-06-02" },
+    { "id": "rx_2", "petName": "Milo", "medication": "Revolution Plus", "dosage": "Monthly topical", "issuedAt": "2026-05-14" },
+    { "id": "rx_3", "petName": "Nala", "medication": "Hypoallergenic diet", "dosage": "Hill's z/d for 8 weeks", "issuedAt": "2026-07-01" }
+  ],
+  "adminSummary": {
+    "gmvMinor": 128450000,
+    "ordersToday": 47,
+    "conversionRate": 2.9,
+    "retentionRate": 54,
+    "activeVendors": 126,
+    "aovMinor": 3120000,
+    "verifiedVetsPct": 88,
+    "salesByCategory": [42, 28, 18, 22, 15, 33, 40]
+  },
+  "adminUsers": [
+    { "id": "user_seller", "name": "Trusted Pet Shop", "role": "Vendor", "status": "ACTIVE" },
+    { "id": "user_buyer", "name": "Demo Buyer", "role": "Customer", "status": "ACTIVE" },
+    { "id": "user_admin", "name": "AdoptMe Admin", "role": "Admin", "status": "ACTIVE" },
+    { "id": "user_vet", "name": "Dr. Ada Okonkwo", "role": "Veterinarian", "status": "PENDING" }
+  ],
+  "moderationQueue": [
+    { "id": "mod_1", "title": "Bengal kitten listing", "reason": "Awaiting health certificate", "createdAt": "2026-07-13T07:00:00.000Z" },
+    { "id": "mod_2", "title": "New vendor: Bird Haven", "reason": "Business license review", "createdAt": "2026-07-12T15:20:00.000Z" },
+    { "id": "mod_3", "title": "Groomer service listing", "reason": "Photo quality check", "createdAt": "2026-07-11T10:40:00.000Z" }
+  ]
+}

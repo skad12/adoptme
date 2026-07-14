@@ -1,94 +1,98 @@
 import Link from "next/link";
+import { PawPrint } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-zinc-200 bg-zinc-50 py-12 text-sm text-zinc-600 dark:border-zinc-800 dark:bg-zinc-950 dark:text-zinc-400">
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_0.8fr_0.8fr]">
-        <div className="space-y-4">
-          <p className="font-semibold text-zinc-900 dark:text-zinc-100">AdoptMe</p>
-          <p className="mt-2 max-w-xs leading-relaxed">
-            A responsible pet marketplace for verified-style listings, welfare-first adoption workflows, escrow-aware checkout, and safer exchanges.
+    <footer className="relative overflow-hidden border-t border-[var(--ui-border)] bg-[color-mix(in_srgb,var(--ui-surface-solid)_88%,transparent)] py-14 text-sm text-[var(--ui-muted)] backdrop-blur-sm">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--ui-primary)]/40 to-transparent"
+      />
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr_0.8fr] lg:px-8">
+        <div className="space-y-5">
+          <Link href="/" className="inline-flex items-center gap-2.5 font-semibold text-[var(--ui-ink)]">
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--ui-primary)] to-[var(--ui-primary-bright)] text-white shadow-md shadow-[color-mix(in_srgb,var(--ui-primary)_30%,transparent)]">
+              <PawPrint className="h-5 w-5" aria-hidden />
+            </span>
+            AdoptMe
+          </Link>
+          <p className="max-w-xs leading-relaxed">
+            Shop, adopt, and book pet services across Nigeria — supplies, marketplace listings, welfare-first adoption, and expert care.
           </p>
           <div className="flex flex-wrap gap-2">
-            <Link className="rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white hover:bg-emerald-700" href="/sell">
-              List a pet
+            <Link className="ui-btn-primary inline-flex rounded-full px-4 py-2 text-xs font-semibold" href="/shop">
+              Shop now
             </Link>
-            <Link className="rounded-full border border-zinc-300 px-4 py-2 text-xs font-semibold text-zinc-800 hover:bg-white dark:border-zinc-700 dark:text-zinc-100 dark:hover:bg-zinc-900" href="/login">
-              Login
+            <Link
+              className="inline-flex rounded-full border border-[var(--ui-border-strong)] bg-[var(--ui-surface-solid)] px-4 py-2 text-xs font-semibold text-[var(--ui-ink)] transition hover:bg-[var(--ui-primary-soft)]"
+              href="/rewards"
+            >
+              PawRewards
             </Link>
           </div>
         </div>
-        <div>
-          <p className="font-semibold text-zinc-900 dark:text-zinc-100">Platform</p>
-          <ul className="mt-2 space-y-2">
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace">
-                Marketplace
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/sell">
-                Sell or exchange
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/adoption">
-                Adoption center
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/donations">
-                Donate
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="font-semibold text-zinc-900 dark:text-zinc-100">Categories</p>
-          <ul className="mt-2 space-y-2">
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace?type=SALE">
-                Buy / sell
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace?type=EXCHANGE">
-                Exchange
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace?type=ADOPTION">
-                Adoption
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/marketplace?type=BREEDING">
-                Breeding animals
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="font-semibold text-zinc-900 dark:text-zinc-100">Trust &amp; safety</p>
-          <ul className="mt-2 space-y-2">
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/support">
-                Help center
-              </Link>
-            </li>
-            <li>
-              <Link className="hover:text-emerald-700 dark:hover:text-emerald-400" href="/admin">
-                Admin console
-              </Link>
-            </li>
-            <li>Health records and microchip details</li>
-            <li>Seller attestation and moderation-ready intake</li>
-          </ul>
-        </div>
+        <FooterCol
+          title="Shop"
+          links={[
+            ["/shop/dog", "Dog"],
+            ["/shop/cat", "Cat"],
+            ["/shop/fish", "Fish"],
+            ["/shop/bird", "Bird"],
+            ["/shop/reptile", "Reptile"],
+            ["/shop/small-pet", "Small Pet"],
+          ]}
+        />
+        <FooterCol
+          title="Services"
+          links={[
+            ["/services/grooming", "Grooming"],
+            ["/services/training", "Training"],
+            ["/services/doggie-day-camp", "Doggie Day Camp"],
+            ["/services/veterinary-care", "Veterinary Care"],
+            ["/stores", "Find a store"],
+          ]}
+        />
+        <FooterCol
+          title="Marketplace"
+          links={[
+            ["/marketplace?type=SALE", "Buy / sell"],
+            ["/marketplace?type=ADOPTION", "Adoption"],
+            ["/marketplace?type=EXCHANGE", "Exchange"],
+            ["/new-pet", "New pet parent"],
+            ["/learn", "Learning center"],
+          ]}
+        />
+        <FooterCol
+          title="Help & rewards"
+          links={[
+            ["/support", "Help center"],
+            ["/rewards", "PawRewards program"],
+            ["/donations", "Donate"],
+            ["/adoption", "Adoption"],
+            ["/dashboard", "Dashboard"],
+          ]}
+        />
       </div>
-      <p className="mx-auto mt-8 max-w-6xl px-4 text-xs text-zinc-500 sm:px-6">
-        Animal welfare, breeding, adoption, and transfer rules vary by region. Always confirm local guidance before bringing a pet home.
+      <p className="mx-auto mt-10 max-w-7xl px-4 text-xs text-[color-mix(in_srgb,var(--ui-muted)_85%,transparent)] sm:px-6 lg:px-8">
+        All prices in Nigerian Naira (₦). Animal welfare, breeding, adoption, and transfer rules vary by region.
       </p>
     </footer>
+  );
+}
+
+function FooterCol({ title, links }: { title: string; links: [string, string][] }) {
+  return (
+    <div>
+      <p className="ui-micro text-[var(--ui-ink)]">{title}</p>
+      <ul className="mt-4 space-y-2.5">
+        {links.map(([href, label]) => (
+          <li key={href}>
+            <Link className="transition hover:text-[var(--ui-primary)]" href={href}>
+              {label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

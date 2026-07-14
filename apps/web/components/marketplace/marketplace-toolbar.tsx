@@ -40,6 +40,9 @@ export function MarketplaceToolbar({ query = {} }: Props) {
     { id: "dogs", label: "Dogs" },
     { id: "cats", label: "Cats" },
     { id: "birds", label: "Birds" },
+    { id: "fish", label: "Fish" },
+    { id: "reptile", label: "Reptile" },
+    { id: "small-pet", label: "Small Pet" },
   ];
 
   return (

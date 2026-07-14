@@ -1,28 +1,5 @@
-import { Card } from "@/components/ui/card";
+import { redirect } from "next/navigation";
 
-export default function SellerDashboardPage() {
-  return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-12 sm:px-6">
-      <div>
-        <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Seller workspace</h1>
-        <p className="mt-2 max-w-2xl text-sm text-zinc-600 dark:text-zinc-400">
-          Manage pet listings, health documents, breeder details, buyer messages, adoption conversations, and handover planning.
-        </p>
-      </div>
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Card className="space-y-3">
-          <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">Listing pipeline</h2>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            Draft listings move through review before they appear publicly, helping each pet profile stay clear and welfare focused.
-          </p>
-        </Card>
-        <Card className="space-y-3">
-          <h2 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">Reputation</h2>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            Completed handovers, accurate records, and helpful communication build trust with future families and adopters.
-          </p>
-        </Card>
-      </div>
-    </div>
-  );
+export default function SellerDashboardRedirect() {
+  redirect("/dashboard/vendor");
 }

@@ -1,0 +1,640 @@
+{
+  "petTypes": [
+    {
+      "slug": "dog",
+      "name": "Dog",
+      "description": "Food, treats, supplies, toys, grooming, health & more.",
+      "categories": [
+        {
+          "slug": "food",
+          "name": "Food",
+          "subcategories": [
+            { "slug": "dry-food", "name": "Dry Food" },
+            { "slug": "wet-food", "name": "Wet Food" },
+            { "slug": "treats", "name": "Treats" },
+            { "slug": "veterinary-diets", "name": "Vet-Authorized Diets" }
+          ]
+        },
+        {
+          "slug": "toys",
+          "name": "Toys",
+          "subcategories": [
+            { "slug": "chew-toys", "name": "Chew Toys" },
+            { "slug": "interactive-toys", "name": "Interactive Toys" }
+          ]
+        },
+        {
+          "slug": "health-and-wellness",
+          "name": "Health & Wellness",
+          "subcategories": [
+            { "slug": "flea-and-tick", "name": "Flea & Tick" },
+            { "slug": "vitamins-and-supplements", "name": "Vitamins & Supplements" }
+          ]
+        },
+        {
+          "slug": "collars-harnesses-and-leashes",
+          "name": "Collars, Harnesses & Leashes",
+          "subcategories": [
+            { "slug": "collars", "name": "Collars" },
+            { "slug": "harnesses", "name": "Harnesses" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "cat",
+      "name": "Cat",
+      "description": "Food, litter, toys, furniture, health supplies & more.",
+      "categories": [
+        {
+          "slug": "food-and-treats",
+          "name": "Food & Treats",
+          "subcategories": [
+            { "slug": "dry-food", "name": "Dry Food" },
+            { "slug": "wet-food", "name": "Wet Food" },
+            { "slug": "treats", "name": "Treats" }
+          ]
+        },
+        {
+          "slug": "litter-and-waste-disposal",
+          "name": "Litter & Waste",
+          "subcategories": [
+            { "slug": "litter", "name": "Litter" },
+            { "slug": "litter-boxes", "name": "Litter Boxes" }
+          ]
+        },
+        {
+          "slug": "toys",
+          "name": "Toys",
+          "subcategories": [
+            { "slug": "interactive-and-electronic", "name": "Interactive" },
+            { "slug": "scratchers", "name": "Scratchers" }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "fish",
+      "name": "Fish",
+      "description": "Aquariums, filters, food, décor & live fish.",
+      "categories": [
+        {
+          "slug": "tanks-aquariums-and-nets",
+          "name": "Tanks & Aquariums",
+          "subcategories": [{ "slug": "starter-kits", "name": "Starter Kits" }]
+        },
+        {
+          "slug": "food-and-care",
+          "name": "Food & Care",
+          "subcategories": [{ "slug": "fish-food", "name": "Fish Food" }]
+        }
+      ]
+    },
+    {
+      "slug": "bird",
+      "name": "Bird",
+      "description": "Cages, food, toys, perches & wild bird supplies.",
+      "categories": [
+        {
+          "slug": "cages-and-stands",
+          "name": "Cages & Stands",
+          "subcategories": [{ "slug": "cages", "name": "Cages" }]
+        },
+        {
+          "slug": "food-and-treats",
+          "name": "Food & Treats",
+          "subcategories": [{ "slug": "pet-bird-food", "name": "Bird Food" }]
+        }
+      ]
+    },
+    {
+      "slug": "reptile",
+      "name": "Reptile",
+      "description": "Habitats, heating, lighting, food & décor.",
+      "categories": [
+        {
+          "slug": "habitats-and-decor",
+          "name": "Habitats & Décor",
+          "subcategories": [{ "slug": "terrariums", "name": "Terrariums" }]
+        },
+        {
+          "slug": "food",
+          "name": "Food",
+          "subcategories": [{ "slug": "frozen-food", "name": "Frozen Food" }]
+        }
+      ]
+    },
+    {
+      "slug": "small-pet",
+      "name": "Small Pet",
+      "description": "Habitats, food, bedding & toys for small companions.",
+      "categories": [
+        {
+          "slug": "cages-habitats-and-hutches",
+          "name": "Cages & Habitats",
+          "subcategories": [{ "slug": "cages", "name": "Cages" }]
+        },
+        {
+          "slug": "food-treats-and-hay",
+          "name": "Food, Treats & Hay",
+          "subcategories": [{ "slug": "food", "name": "Food" }]
+        }
+      ]
+    },
+    {
+      "slug": "farm-animal",
+      "name": "Farm & Backyard",
+      "description": "Poultry, livestock feed & farm animal care.",
+      "categories": [
+        {
+          "slug": "chicken-and-poultry",
+          "name": "Chicken & Poultry",
+          "subcategories": [{ "slug": "feed", "name": "Feed" }]
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_001",
+      "slug": "premium-adult-dry-dog-food-salmon-rice",
+      "name": "Premium Sensitive Skin & Stomach Adult Dry Dog Food - Salmon & Rice",
+      "brand": "ProPlan NG",
+      "petType": "dog",
+      "categorySlug": "food",
+      "subcategorySlug": "dry-food",
+      "priceMinor": 4850000,
+      "currency": "NGN",
+      "description": "High-quality dry kibble formulated for adult dogs with sensitive digestion. Salmon as the first ingredient with no corn, wheat, or soy.",
+      "imageUrl": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=800&q=80",
+      "rating": 4.8,
+      "reviewCount": 312,
+      "autoshipEligible": true
+    },
+    {
+      "id": "prod_002",
+      "slug": "grain-free-puppy-dry-food-chicken",
+      "name": "Grain Free Puppy Dry Dog Food - Chicken & Salmon",
+      "brand": "Open Farm NG",
+      "petType": "dog",
+      "categorySlug": "food",
+      "subcategorySlug": "dry-food",
+      "priceMinor": 6200000,
+      "currency": "NGN",
+      "description": "Humanely raised protein blend for growing puppies with DHA for brain development.",
+      "imageUrl": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80",
+      "rating": 4.9,
+      "reviewCount": 89,
+      "isNew": true,
+      "autoshipEligible": true
+    },
+    {
+      "id": "prod_003",
+      "slug": "durable-rubber-chew-dog-toy",
+      "name": "Durable Rubber Chew Dog Toy - Large",
+      "brand": "JoyHound",
+      "petType": "dog",
+      "categorySlug": "toys",
+      "subcategorySlug": "chew-toys",
+      "priceMinor": 850000,
+      "currency": "NGN",
+      "description": "Heavy-duty natural rubber chew toy for aggressive chewers. Dishwasher safe.",
+      "imageUrl": "https://images.unsplash.com/photo-1535294435445-d7249524ef2e?w=800&q=80",
+      "rating": 4.6,
+      "reviewCount": 204
+    },
+    {
+      "id": "prod_004",
+      "slug": "reflective-adjustable-dog-harness",
+      "name": "Reflective Adjustable Dog Harness - Medium",
+      "brand": "Arcadia Trail",
+      "petType": "dog",
+      "categorySlug": "collars-harnesses-and-leashes",
+      "subcategorySlug": "harnesses",
+      "priceMinor": 1250000,
+      "currency": "NGN",
+      "description": "Padded harness with reflective stitching for safe evening walks.",
+      "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
+      "rating": 4.7,
+      "reviewCount": 156
+    },
+    {
+      "id": "prod_005",
+      "slug": "indoor-adult-cat-dry-food-chicken",
+      "name": "Indoor Adult Cat Dry Food - Chicken & Rice",
+      "brand": "Whisker City",
+      "petType": "cat",
+      "categorySlug": "food-and-treats",
+      "subcategorySlug": "dry-food",
+      "priceMinor": 3200000,
+      "currency": "NGN",
+      "description": "Balanced nutrition for indoor cats with hairball control formula.",
+      "imageUrl": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80",
+      "rating": 4.5,
+      "reviewCount": 178,
+      "autoshipEligible": true
+    },
+    {
+      "id": "prod_006",
+      "slug": "clumping-cat-litter-unscented",
+      "name": "Clumping Cat Litter - Unscented, 20 lb",
+      "brand": "Fresh Step NG",
+      "petType": "cat",
+      "categorySlug": "litter-and-waste-disposal",
+      "subcategorySlug": "litter",
+      "priceMinor": 980000,
+      "currency": "NGN",
+      "description": "Low-dust clumping litter with odor control for multi-cat households.",
+      "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=800&q=80",
+      "rating": 4.4,
+      "reviewCount": 421
+    },
+    {
+      "id": "prod_007",
+      "slug": "interactive-feather-cat-wand",
+      "name": "Interactive Feather Cat Wand Toy",
+      "brand": "SmartyKat",
+      "petType": "cat",
+      "categorySlug": "toys",
+      "subcategorySlug": "interactive-and-electronic",
+      "priceMinor": 450000,
+      "currency": "NGN",
+      "description": "Replaceable feather attachments to encourage hunting play behavior.",
+      "imageUrl": "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?w=800&q=80",
+      "rating": 4.6,
+      "reviewCount": 93
+    },
+    {
+      "id": "prod_008",
+      "slug": "10-gallon-aquarium-starter-kit",
+      "name": "10 Gallon Aquarium Starter Kit with LED Hood",
+      "brand": "Aqueon NG",
+      "petType": "fish",
+      "categorySlug": "tanks-aquariums-and-nets",
+      "subcategorySlug": "starter-kits",
+      "priceMinor": 4500000,
+      "currency": "NGN",
+      "description": "Complete starter kit with filter, heater, thermometer, and LED lighting.",
+      "imageUrl": "https://images.unsplash.com/photo-1524704654690-b56c05c78a00?w=800&q=80",
+      "rating": 4.3,
+      "reviewCount": 67
+    },
+    {
+      "id": "prod_009",
+      "slug": "tropical-flake-fish-food",
+      "name": "Tropical Flake Fish Food - 2.2 oz",
+      "brand": "Tetra NG",
+      "petType": "fish",
+      "categorySlug": "food-and-care",
+      "subcategorySlug": "fish-food",
+      "priceMinor": 320000,
+      "currency": "NGN",
+      "description": "Balanced daily diet for tropical community fish.",
+      "imageUrl": "https://images.unsplash.com/photo-1559190394-df5a28aab5c5?w=800&q=80",
+      "rating": 4.5,
+      "reviewCount": 112
+    },
+    {
+      "id": "prod_010",
+      "slug": "parakeet-starter-cage-kit",
+      "name": "Parakeet Starter Cage Kit with Perches & Feeder",
+      "brand": "All Living Things",
+      "petType": "bird",
+      "categorySlug": "cages-and-stands",
+      "subcategorySlug": "cages",
+      "priceMinor": 2800000,
+      "currency": "NGN",
+      "description": "Spacious cage with included perches, food dish, and swing for small birds.",
+      "imageUrl": "https://images.unsplash.com/photo-1555169062-013468b47731?w=800&q=80",
+      "rating": 4.4,
+      "reviewCount": 45
+    },
+    {
+      "id": "prod_011",
+      "slug": "bearded-dragon-terrarium-40gal",
+      "name": "Bearded Dragon Terrarium - 40 Gallon",
+      "brand": "Zoo Med NG",
+      "petType": "reptile",
+      "categorySlug": "habitats-and-decor",
+      "subcategorySlug": "terrariums",
+      "priceMinor": 8900000,
+      "currency": "NGN",
+      "description": "Front-opening glass terrarium with screen top for proper ventilation.",
+      "imageUrl": "https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?w=800&q=80",
+      "rating": 4.7,
+      "reviewCount": 38,
+      "isNew": true
+    },
+    {
+      "id": "prod_012",
+      "slug": "guinea-pig-habitat-starter",
+      "name": "Guinea Pig Habitat Starter Kit",
+      "brand": "Full Cheeks",
+      "petType": "small-pet",
+      "categorySlug": "cages-habitats-and-hutches",
+      "subcategorySlug": "cages",
+      "priceMinor": 3500000,
+      "currency": "NGN",
+      "description": "Expandable habitat with hideaway, water bottle, and food bowl included.",
+      "imageUrl": "https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=800&q=80",
+      "rating": 4.5,
+      "reviewCount": 52
+    },
+    {
+      "id": "prod_013",
+      "slug": "poultry-layer-pellets-25lb",
+      "name": "Layer Pellets for Chickens - 25 lb",
+      "brand": "Farm Fresh NG",
+      "petType": "farm-animal",
+      "categorySlug": "chicken-and-poultry",
+      "subcategorySlug": "feed",
+      "priceMinor": 2100000,
+      "currency": "NGN",
+      "description": "Complete layer feed with calcium for egg production.",
+      "imageUrl": "https://images.unsplash.com/photo-1563281577-a7be47e20db9?w=800&q=80",
+      "rating": 4.6,
+      "reviewCount": 29
+    },
+    {
+      "id": "prod_014",
+      "slug": "flea-tick-prevention-dog-3pack",
+      "name": "Flea & Tick Prevention for Dogs - 3 Month Supply",
+      "brand": "Frontline NG",
+      "petType": "dog",
+      "categorySlug": "health-and-wellness",
+      "subcategorySlug": "flea-and-tick",
+      "priceMinor": 3800000,
+      "currency": "NGN",
+      "description": "Monthly topical treatment killing fleas, ticks, and chewing lice.",
+      "imageUrl": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80",
+      "rating": 4.8,
+      "reviewCount": 267
+    },
+    {
+      "id": "prod_015",
+      "slug": "hip-joint-supplement-dog",
+      "name": "Hip & Joint Supplement Chews for Dogs - 60 count",
+      "brand": "Authority NG",
+      "petType": "dog",
+      "categorySlug": "health-and-wellness",
+      "subcategorySlug": "vitamins-and-supplements",
+      "priceMinor": 1650000,
+      "currency": "NGN",
+      "description": "Glucosamine and chondroitin soft chews for joint mobility support.",
+      "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+      "rating": 4.5,
+      "reviewCount": 134,
+      "autoshipEligible": true
+    }
+  ],
+  "services": [
+    {
+      "id": "svc_grooming",
+      "slug": "grooming",
+      "type": "GROOMING",
+      "name": "Grooming Salon",
+      "summary": "Baths, haircuts, nail trims, and ear cleaning by certified groomers.",
+      "description": "Our grooming salon offers full-service baths, breed-specific haircuts, nail trimming, ear cleaning, and add-ons like de-shedding treatments. Select your store, pet type, and breed for an estimated price before booking.",
+      "priceFromMinor": 850000,
+      "currency": "NGN",
+      "duration": "1–3 hours",
+      "bookingSteps": ["Select store", "Choose pet type & breed", "Pick service & add-ons", "Select date & time", "Sign in to confirm"],
+      "imageUrl": "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=800&q=80"
+    },
+    {
+      "id": "svc_training",
+      "slug": "training",
+      "type": "TRAINING",
+      "name": "Dog Training",
+      "summary": "Group classes, private sessions, and virtual training for all skill levels.",
+      "description": "Accredited trainers lead beginner through advanced classes covering obedience, socialization, and behavior modification. Options include 6-week group classes, private sessions, and virtual training.",
+      "priceFromMinor": 3100000,
+      "currency": "NGN",
+      "duration": "6 weeks (group)",
+      "bookingSteps": ["Select store", "Choose class level", "Pick schedule", "Register pet profile", "Sign in to confirm"],
+      "imageUrl": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80"
+    },
+    {
+      "id": "svc_day_camp",
+      "slug": "doggie-day-camp",
+      "type": "DAY_CAMP",
+      "name": "Doggie Day Camp",
+      "summary": "Supervised play, exercise, and socialization — day visits only.",
+      "description": "A safe, engaging environment where dogs socialize and play under trained staff supervision. Includes physical exercise and mental stimulation. Purchase a Play & Save pass for up to 5 free days.",
+      "priceFromMinor": 620000,
+      "currency": "NGN",
+      "duration": "Full day",
+      "bookingSteps": ["Select store", "Add pet profile", "Choose day pass or package", "Pick date", "Sign in to confirm"],
+      "imageUrl": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
+    },
+    {
+      "id": "svc_vet",
+      "slug": "veterinary-care",
+      "type": "VET_CARE",
+      "name": "Veterinary Care",
+      "summary": "Wellness exams, vaccinations, microchipping, and dental care in-store.",
+      "description": "Independent veterinary teams inside select AdoptMe stores provide wellness exams, vaccinations, microchipping, dental care, and personalized health plans for your pet.",
+      "priceFromMinor": 1200000,
+      "currency": "NGN",
+      "duration": "30–60 min",
+      "bookingSteps": ["Find a store with vet services", "Call or book online", "Complete pet health profile", "Attend appointment"],
+      "imageUrl": "https://images.unsplash.com/photo-1611003228941-98852ba62227?w=800&q=80"
+    }
+  ],
+  "stores": [
+    {
+      "id": "store_lag_001",
+      "slug": "lagos-victoria-island-store1001",
+      "name": "AdoptMe Lagos - Victoria Island",
+      "address": "12 Akin Adesola Street",
+      "city": "Lagos",
+      "state": "Lagos",
+      "stateCode": "la",
+      "phone": "+234 1 234 5678",
+      "services": ["GROOMING", "TRAINING", "DAY_CAMP", "VET_CARE"],
+      "hours": "Mon–Sat 9AM–9PM, Sun 10AM–7PM"
+    },
+    {
+      "id": "store_lag_002",
+      "slug": "lagos-lekki-store1002",
+      "name": "AdoptMe Lagos - Lekki",
+      "address": "45 Admiralty Way, Lekki Phase 1",
+      "city": "Lagos",
+      "state": "Lagos",
+      "stateCode": "la",
+      "phone": "+234 1 345 6789",
+      "services": ["GROOMING", "TRAINING", "DAY_CAMP"],
+      "hours": "Mon–Sat 9AM–9PM, Sun 10AM–7PM"
+    },
+    {
+      "id": "store_abj_001",
+      "slug": "abuja-wuse-store2001",
+      "name": "AdoptMe Abuja - Wuse",
+      "address": "8 Ahmadu Bello Way",
+      "city": "Abuja",
+      "state": "FCT",
+      "stateCode": "fc",
+      "phone": "+234 9 876 5432",
+      "services": ["GROOMING", "TRAINING", "VET_CARE"],
+      "hours": "Mon–Sat 9AM–8PM, Sun 11AM–6PM"
+    },
+    {
+      "id": "store_phc_001",
+      "slug": "port-harcourt-store3001",
+      "name": "AdoptMe Port Harcourt",
+      "address": "22 Aba Road, GRA Phase 2",
+      "city": "Port Harcourt",
+      "state": "Rivers",
+      "stateCode": "ri",
+      "phone": "+234 84 123 4567",
+      "services": ["GROOMING", "DAY_CAMP"],
+      "hours": "Mon–Sat 9AM–8PM, Sun 12PM–6PM"
+    },
+    {
+      "id": "store_ibd_001",
+      "slug": "ibadan-store4001",
+      "name": "AdoptMe Ibadan",
+      "address": "5 Ring Road",
+      "city": "Ibadan",
+      "state": "Oyo",
+      "stateCode": "oy",
+      "phone": "+234 2 987 6543",
+      "services": ["GROOMING", "TRAINING"],
+      "hours": "Mon–Sat 9AM–8PM, Sun Closed"
+    },
+    {
+      "id": "store_kan_001",
+      "slug": "kano-store5001",
+      "name": "AdoptMe Kano",
+      "address": "18 Murtala Mohammed Way",
+      "city": "Kano",
+      "state": "Kano",
+      "stateCode": "kn",
+      "phone": "+234 64 321 0987",
+      "services": ["GROOMING", "VET_CARE"],
+      "hours": "Mon–Sat 9AM–8PM, Sun 12PM–5PM"
+    }
+  ],
+  "articles": [
+    {
+      "id": "art_001",
+      "slug": "what-should-i-feed-my-dog",
+      "petType": "dog",
+      "category": "dog-care",
+      "title": "What Should I Feed My Dog?",
+      "summary": "A guide to choosing the right dog food based on age, size, and dietary needs.",
+      "tags": ["Nutrition", "How To"],
+      "readMinutes": 6
+    },
+    {
+      "id": "art_002",
+      "slug": "puppy-potty-training-dos-and-donts",
+      "petType": "dog",
+      "category": "dog-care",
+      "title": "Puppy Potty Training: The Dos and Don'ts",
+      "summary": "Essential tips for house-training your new puppy with positive reinforcement.",
+      "tags": ["Training & Behavior", "New Pet"],
+      "readMinutes": 8
+    },
+    {
+      "id": "art_003",
+      "slug": "how-to-train-a-new-puppy",
+      "petType": "dog",
+      "category": "dog-care",
+      "title": "How to Train a New Puppy",
+      "summary": "Foundational obedience commands and socialization strategies for puppies.",
+      "tags": ["Training & Behavior", "How To"],
+      "readMinutes": 10
+    },
+    {
+      "id": "art_004",
+      "slug": "what-should-i-feed-my-kitten",
+      "petType": "cat",
+      "category": "cat-care",
+      "title": "What Should I Feed My Kitten?",
+      "summary": "Nutritional requirements for growing kittens and transitioning to adult food.",
+      "tags": ["Nutrition", "New Pet"],
+      "readMinutes": 5
+    },
+    {
+      "id": "art_005",
+      "slug": "what-do-i-need-for-my-new-cat",
+      "petType": "cat",
+      "category": "cat-care",
+      "title": "What Do I Need to Take Care of My New Cat?",
+      "summary": "Checklist of essentials: litter box, food, scratching post, carrier, and more.",
+      "tags": ["New Pet", "Checklist"],
+      "readMinutes": 7
+    },
+    {
+      "id": "art_006",
+      "slug": "how-do-i-set-up-my-aquarium",
+      "petType": "fish",
+      "category": "fish-care",
+      "title": "How Do I Set Up My Aquarium for Multiple Fish?",
+      "summary": "Step-by-step aquarium setup including cycling, filtration, and stocking.",
+      "tags": ["How To", "New Pet"],
+      "readMinutes": 12
+    },
+    {
+      "id": "art_007",
+      "slug": "healthy-aquarium-water",
+      "petType": "fish",
+      "category": "fish-care",
+      "title": "Healthy Aquarium Water",
+      "summary": "Testing, conditioning, and maintaining water quality for thriving fish.",
+      "tags": ["Health & Wellness", "How To"],
+      "readMinutes": 8
+    },
+    {
+      "id": "art_008",
+      "slug": "bearded-dragon-care-guide",
+      "petType": "reptile",
+      "category": "reptile-care",
+      "title": "Bearded Dragon Care Guide",
+      "summary": "Habitat setup, diet, heating, and handling tips for bearded dragons.",
+      "tags": ["How To", "New Pet"],
+      "readMinutes": 11
+    },
+    {
+      "id": "art_009",
+      "slug": "so-you-want-a-hamster",
+      "petType": "small-pet",
+      "category": "small-pet-care",
+      "title": "So You Want a Hamster?",
+      "summary": "Everything new hamster owners need: cage size, bedding, diet, and enrichment.",
+      "tags": ["New Pet", "How To"],
+      "readMinutes": 9
+    },
+    {
+      "id": "art_010",
+      "slug": "so-you-want-a-pet-guinea-pig",
+      "petType": "small-pet",
+      "category": "small-pet-care",
+      "title": "So You Want a Pet Guinea Pig?",
+      "summary": "Guinea pig breeds, diet, handling, and habitat requirements.",
+      "tags": ["New Pet", "Nutrition"],
+      "readMinutes": 8
+    },
+    {
+      "id": "art_011",
+      "slug": "parakeet-care-basics",
+      "petType": "bird",
+      "category": "bird-care",
+      "title": "Parakeet Care Basics",
+      "summary": "Cage setup, diet, socialization, and health signs for parakeets.",
+      "tags": ["New Pet", "How To"],
+      "readMinutes": 7
+    },
+    {
+      "id": "art_012",
+      "slug": "bringing-home-a-new-dog",
+      "petType": "dog",
+      "category": "dog-care",
+      "title": "Bringing Home a New Dog: What You Need to Know",
+      "summary": "Preparing your home, establishing routines, and the first vet visit.",
+      "tags": ["New Pet", "Checklist"],
+      "readMinutes": 9
+    }
+  ]
+}

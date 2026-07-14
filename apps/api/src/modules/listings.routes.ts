@@ -139,7 +139,7 @@ listingsRouter.post("/", optionalAuth, async (req, res, next) => {
         title: body.title,
         description: body.description,
         priceCents: body.listingType === "SALE" ? (body.priceCents ?? null) : null,
-        currency: "USD",
+        currency: "NGN",
         country: body.country,
         city: body.city,
         categorySlugs: [body.animalCategory],

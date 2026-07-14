@@ -1,0 +1,50 @@
+---
+description: Enterprise pet marketplace UI/UX standards for AdoptMe web
+globs: apps/web/**/*.{tsx,css}
+alwaysApply: false
+---
+
+# AdoptMe Premium UI System
+
+Design for trust, care, warmth, and veterinary professionalism. Feel: Stripe clarity + Airbnb warmth + Linear density + Chewy/Rover pet affinity — never generic Tailwind starter pages.
+
+## Brand systems (keep both)
+
+- **Marketing** (`/` shop, marketplace): Geist + deep emerald accents, layered photo/gradient backgrounds.
+- **Dashboards** (`/dashboard/**`): Plus Jakarta Sans + mint `#0D9F87` / coral `#F57A5C` tokens (`--dash-*` in `globals.css`).
+
+Do not invent a third palette. Do not default to Inter, purple gradients, or flat white canvases.
+
+## Surfaces
+
+- Layered backgrounds: radial mesh, soft grid mask, gradient washes — depth without noise.
+- Cards: `dash-soft-card` — soft elevation, 1px gradient edge, hover lift 220ms, glass/blur only where chrome needs it (sidebar/topbar).
+- Max content width ~1440px; 8pt spacing rhythm (4–128).
+
+## Typography
+
+- Hierarchy by size/weight/tracking — not everything bold.
+- Page titles ~28–36px, sections ~20–22px, body 15–16px, meta 13–14px, pills 11px uppercase.
+- Line-height ~1.5 for body; tighter tracking on KPI numerals (`dash-kpi-value`).
+
+## Motion
+
+- 150–300ms, spring-like easing (`--dash-ease`).
+- Prefer CSS: card lift, nav active glow, chart bar hover, `dash-stagger` reveal.
+- Honor `prefers-reduced-motion` (already global).
+
+## Components
+
+- Reuse `DashboardShell`, `SoftCard`, `KpiStat`, `SectionHeader`, `ActivityList`, `SafeImage`, `dash-btn-primary` / `dash-btn-ghost`.
+- Images: `object-cover`, overflow clip, hover zoom via group, fallback via `SafeImage`.
+- Icons: Lucide only; pair with `aria-hidden` when decorative; focus rings on controls.
+
+## Accessibility
+
+- WCAG AA contrast on mint/coral text pairs (use soft tiles for icons, ink for body).
+- Focus-visible outlines on nav/buttons; `aria-current` for active routes.
+- Touch targets ≥40px on mobile dashboard chips.
+
+## Out of scope unless asked
+
+Do not bulk-add Framer Motion, drag-drop widget grids, CSV export tables, command palette, or mega-menus unless the task explicitly requires them.

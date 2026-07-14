@@ -36,10 +36,11 @@ export default async function MarketplacePage({ searchParams }: { searchParams: 
   const totalPages = Math.max(1, Math.ceil(data.total / data.pageSize));
 
   return (
-    <div className="mx-auto max-w-6xl space-y-8 px-4 py-10 sm:px-6">
+    <div className="ui-container motion-page space-y-8 py-10 sm:py-12">
       <div className="space-y-3">
-        <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">Marketplace</h1>
-        <p className="max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+        <p className="ui-micro text-[var(--ui-primary)]">Marketplace</p>
+        <h1 className="ui-page-title text-[var(--ui-ink)]">Marketplace</h1>
+        <p className="ui-body max-w-2xl text-[var(--ui-muted)]">
           Browse pet listings with filters for dogs, cats, birds, breeding, sales, exchanges, and adoptions. Review care notes before you contact a family, shelter, or breeder.
         </p>
       </div>

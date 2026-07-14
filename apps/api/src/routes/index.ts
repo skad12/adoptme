@@ -8,6 +8,8 @@ import { donationsRouter } from "../modules/donations.routes.js";
 import { messagesRouter } from "../modules/messages.routes.js";
 import { adminRouter } from "../modules/admin.routes.js";
 import { uploadsRouter } from "../modules/uploads.routes.js";
+import { catalogRouter } from "../modules/catalog.routes.js";
+import { dashboardRouter, petsRouter } from "../modules/dashboard.routes.js";
 
 export const apiRouter: ExpressRouter = Router();
 
@@ -19,3 +21,6 @@ apiRouter.use("/donations", donationsRouter);
 apiRouter.use("/messages", messagesRouter);
 apiRouter.use("/admin", adminRouter);
 apiRouter.use("/uploads", uploadsRouter);
+apiRouter.use("/catalog", catalogRouter);
+apiRouter.use("/dashboard", dashboardRouter);
+apiRouter.use("/pets", petsRouter);

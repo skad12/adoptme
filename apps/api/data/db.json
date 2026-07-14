@@ -84,6 +84,26 @@
       "id": "cat_adoption",
       "slug": "adoption",
       "name": "Adoption"
+    },
+    {
+      "id": "cat_fish",
+      "slug": "fish",
+      "name": "Fish"
+    },
+    {
+      "id": "cat_reptile",
+      "slug": "reptile",
+      "name": "Reptile"
+    },
+    {
+      "id": "cat_small_pet",
+      "slug": "small-pet",
+      "name": "Small Pet"
+    },
+    {
+      "id": "cat_farm",
+      "slug": "farm-animal",
+      "name": "Farm & Backyard"
     }
   ],
   "pets": [
@@ -1152,10 +1172,10 @@
       "petId": "pet_dogs_01",
       "title": "Sunny the Golden Retriever - family ready",
       "description": "Sunny is a Golden Retriever with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 65000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "priceCents": 100750000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs"
       ],
@@ -1176,9 +1196,9 @@
       "title": "Scout the Border Collie - adoption ready",
       "description": "Scout is a Border Collie with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs",
         "adoption"
@@ -1199,10 +1219,10 @@
       "petId": "pet_dogs_03",
       "title": "Daisy the Labrador Retriever - family ready",
       "description": "Daisy is a Labrador Retriever with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 100000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "priceCents": 155000000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs"
       ],
@@ -1223,9 +1243,9 @@
       "title": "Bruno the French Bulldog - open to exchange",
       "description": "Bruno is a French Bulldog with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs",
         "exchange"
@@ -1246,10 +1266,10 @@
       "petId": "pet_dogs_05",
       "title": "Nova the German Shepherd - family ready",
       "description": "Nova is a German Shepherd with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 135000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "priceCents": 209250000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs"
       ],
@@ -1270,9 +1290,9 @@
       "title": "Milo the Beagle - adoption ready",
       "description": "Milo is a Beagle with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs",
         "adoption"
@@ -1293,10 +1313,10 @@
       "petId": "pet_dogs_07",
       "title": "Ruby the Cocker Spaniel - family ready",
       "description": "Ruby is a Cocker Spaniel with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 170000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "priceCents": 263500000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs"
       ],
@@ -1317,9 +1337,9 @@
       "title": "Atlas the Siberian Husky - open to exchange",
       "description": "Atlas is a Siberian Husky with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs",
         "exchange"
@@ -1340,10 +1360,10 @@
       "petId": "pet_dogs_09",
       "title": "Pepper the Dachshund - family ready",
       "description": "Pepper is a Dachshund with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 205000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "priceCents": 317750000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs"
       ],
@@ -1364,9 +1384,9 @@
       "title": "Willow the Poodle - adoption ready",
       "description": "Willow is a Poodle with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Austin",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Lagos",
       "categorySlugs": [
         "dogs",
         "adoption"
@@ -1388,9 +1408,9 @@
       "title": "Miso the Domestic Shorthair - adoption ready",
       "description": "Miso is a Domestic Shorthair with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats",
         "adoption"
@@ -1411,10 +1431,10 @@
       "petId": "pet_cats_02",
       "title": "Kiko the Bengal - family ready",
       "description": "Kiko is a Bengal with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 82500,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "priceCents": 127875000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats"
       ],
@@ -1434,10 +1454,10 @@
       "petId": "pet_cats_03",
       "title": "Luna the Maine Coon - family ready",
       "description": "Luna is a Maine Coon with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 100000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "priceCents": 155000000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats"
       ],
@@ -1458,9 +1478,9 @@
       "title": "Nala the Siamese - open to exchange",
       "description": "Nala is a Siamese with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats",
         "exchange"
@@ -1482,9 +1502,9 @@
       "title": "Olive the Ragdoll - adoption ready",
       "description": "Olive is a Ragdoll with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats",
         "adoption"
@@ -1505,10 +1525,10 @@
       "petId": "pet_cats_06",
       "title": "Jasper the British Shorthair - family ready",
       "description": "Jasper is a British Shorthair with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 152500,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "priceCents": 236375000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats"
       ],
@@ -1528,10 +1548,10 @@
       "petId": "pet_cats_07",
       "title": "Cleo the Persian - family ready",
       "description": "Cleo is a Persian with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 170000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "priceCents": 263500000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats"
       ],
@@ -1552,9 +1572,9 @@
       "title": "Mochi the Scottish Fold - adoption ready",
       "description": "Mochi is a Scottish Fold with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats",
         "adoption"
@@ -1576,9 +1596,9 @@
       "title": "Hazel the Sphynx - open to exchange",
       "description": "Hazel is a Sphynx with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats",
         "exchange"
@@ -1599,10 +1619,10 @@
       "petId": "pet_cats_10",
       "title": "Tilly the Russian Blue - family ready",
       "description": "Tilly is a Russian Blue with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 222500,
-      "currency": "USD",
-      "country": "US",
-      "city": "Denver",
+      "priceCents": 344875000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Abuja",
       "categorySlugs": [
         "cats"
       ],
@@ -1622,10 +1642,10 @@
       "petId": "pet_birds_01",
       "title": "Kiwi the Green Parrot - family ready",
       "description": "Kiwi is a Green Parrot with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 65000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 100750000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1646,9 +1666,9 @@
       "title": "Pip the Cockatiel - adoption ready",
       "description": "Pip is a Cockatiel with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds",
         "adoption"
@@ -1669,10 +1689,10 @@
       "petId": "pet_birds_03",
       "title": "Rio the Budgerigar - family ready",
       "description": "Rio is a Budgerigar with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 100000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 155000000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1693,9 +1713,9 @@
       "title": "Sunny the Canary - open to exchange",
       "description": "Sunny is a Canary with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds",
         "exchange"
@@ -1716,10 +1736,10 @@
       "petId": "pet_birds_05",
       "title": "Mango the Lovebird - family ready",
       "description": "Mango is a Lovebird with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 135000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 209250000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1740,9 +1760,9 @@
       "title": "Echo the African Grey - adoption ready",
       "description": "Echo is a African Grey with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds",
         "adoption"
@@ -1763,10 +1783,10 @@
       "petId": "pet_birds_07",
       "title": "Pearl the Dove - family ready",
       "description": "Pearl is a Dove with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 170000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 263500000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1786,10 +1806,10 @@
       "petId": "pet_birds_08",
       "title": "Skye the Finch - family ready",
       "description": "Skye is a Finch with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 95000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 147250000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1809,10 +1829,10 @@
       "petId": "pet_birds_09",
       "title": "Coco the Conure - family ready",
       "description": "Coco is a Conure with clear care notes, health records, compatibility details, and a transition plan for the next family.",
-      "priceCents": 205000,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "priceCents": 317750000,
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds"
       ],
@@ -1833,9 +1853,9 @@
       "title": "Olive the Parakeet - adoption ready",
       "description": "Olive is a Parakeet with clear care notes, health records, compatibility details, and a transition plan for the next family.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Seattle",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Port Harcourt",
       "categorySlugs": [
         "birds",
         "adoption"
@@ -1857,9 +1877,9 @@
       "title": "Golden Retriever breeding profile - Maple",
       "description": "Maple is listed as a responsible breeding animal with parent health context, lineage notes, temperament observations, and care expectations available before any family discussion.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Portland",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Ibadan",
       "categorySlugs": [
         "breeding"
       ],
@@ -1880,9 +1900,9 @@
       "title": "Bengal breeding profile - Orion",
       "description": "Orion is listed as a responsible breeding animal with parent health context, lineage notes, temperament observations, and care expectations available before any family discussion.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Portland",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Ibadan",
       "categorySlugs": [
         "breeding"
       ],
@@ -1903,9 +1923,9 @@
       "title": "Miniature Poodle breeding profile - Freya",
       "description": "Freya is listed as a responsible breeding animal with parent health context, lineage notes, temperament observations, and care expectations available before any family discussion.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Portland",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Ibadan",
       "categorySlugs": [
         "breeding"
       ],
@@ -1926,9 +1946,9 @@
       "title": "British Shorthair breeding profile - Hazel",
       "description": "Hazel is listed as a responsible breeding animal with parent health context, lineage notes, temperament observations, and care expectations available before any family discussion.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Portland",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Ibadan",
       "categorySlugs": [
         "breeding"
       ],
@@ -1949,9 +1969,9 @@
       "title": "Labrador Retriever breeding profile - Cedar",
       "description": "Cedar is listed as a responsible breeding animal with parent health context, lineage notes, temperament observations, and care expectations available before any family discussion.",
       "priceCents": null,
-      "currency": "USD",
-      "country": "US",
-      "city": "Portland",
+      "currency": "NGN",
+      "country": "Nigeria",
+      "city": "Ibadan",
       "categorySlugs": [
         "breeding"
       ],
@@ -2183,8 +2203,8 @@
       "id": "campaign_welfare_1",
       "title": "Emergency shelter fund",
       "description": "Supports medical care and transport for rescued animals.",
-      "goalCents": 50000000,
-      "raisedCents": 12000000,
+      "goalCents": 77500000000,
+      "raisedCents": 18600000000,
       "status": "ACTIVE",
       "beneficiary": "Global Animal Welfare Alliance",
       "createdAt": "2026-01-04T00:00:00.000Z"

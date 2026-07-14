@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
 const btnPrimary =
-  "inline-flex h-11 items-center justify-center rounded-full bg-emerald-600 px-6 text-sm font-semibold text-white shadow-sm shadow-emerald-600/25 transition hover:bg-emerald-700";
+  "ui-btn-primary inline-flex h-12 items-center justify-center rounded-full px-7 text-[15px] font-semibold";
 
 const pillars = [
   {
@@ -201,6 +201,35 @@ export default function HomePage() {
       </section>
 
       <section className="border-y border-zinc-200/80 bg-white/70 py-16 dark:border-zinc-800/80 dark:bg-zinc-950/60">
+        <div className="mx-auto max-w-6xl space-y-8 px-4 sm:px-6">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">Shop by pet</p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950 dark:text-zinc-50">Supplies for every companion</h2>
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { label: "Dog", href: "/shop/dog" },
+              { label: "Cat", href: "/shop/cat" },
+              { label: "Fish", href: "/shop/fish" },
+              { label: "Bird", href: "/shop/bird" },
+              { label: "Reptile", href: "/shop/reptile" },
+              { label: "Small Pet", href: "/shop/small-pet" },
+              { label: "Farm & Backyard", href: "/shop/farm-animal" },
+              { label: "All shop", href: "/shop" },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl border border-zinc-200/80 bg-white px-4 py-5 text-sm font-semibold text-zinc-900 transition hover:border-emerald-500 hover:text-emerald-700 dark:border-zinc-800/80 dark:bg-zinc-950 dark:text-zinc-50 dark:hover:text-emerald-400"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-zinc-200/80 bg-white/70 py-16 dark:border-zinc-800/80 dark:bg-zinc-950/60">
         <div className="mx-auto grid max-w-6xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="space-y-4">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-700 dark:text-emerald-300">Responsible uploads</p>
@@ -231,22 +260,25 @@ export default function HomePage() {
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {pillars.map((p) => (
-            <Card key={p.title} className="space-y-3 border-zinc-200/80 bg-white/80 p-5 dark:border-zinc-800/80 dark:bg-zinc-950/80">
-              <p.icon className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-              <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">{p.title}</h3>
-              <p className="text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{p.body}</p>
+            <Card key={p.title} className="space-y-3 p-5">
+              <p.icon className="h-6 w-6 text-[var(--ui-primary)]" />
+              <h3 className="text-[15px] font-semibold text-[var(--ui-ink)]">{p.title}</h3>
+              <p className="text-sm leading-relaxed text-[var(--ui-muted)]">{p.body}</p>
             </Card>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <Card className="flex flex-col gap-4 bg-emerald-600 p-8 text-white dark:bg-emerald-700 sm:flex-row sm:items-center sm:justify-between">
+        <Card className="flex flex-col gap-5 overflow-hidden border-0 bg-gradient-to-br from-[var(--ui-primary)] to-[var(--ui-primary-bright)] p-8 text-white shadow-[var(--ui-shadow-lift)] sm:flex-row sm:items-center sm:justify-between">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-100">Ready to list?</p>
-            <h2 className="mt-2 text-2xl font-semibold">Create a safer sale or swap listing in minutes.</h2>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">Ready to list?</p>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">Create a safer sale or swap listing in minutes.</h2>
           </div>
-          <Link href="/sell" className="inline-flex h-11 items-center justify-center rounded-full bg-white px-6 text-sm font-semibold text-emerald-700 hover:bg-emerald-50">
+          <Link
+            href="/sell"
+            className="inline-flex h-12 items-center justify-center rounded-full bg-white px-7 text-[15px] font-semibold text-[var(--ui-primary)] shadow-lg transition hover:bg-emerald-50"
+          >
             Start seller form
           </Link>
         </Card>

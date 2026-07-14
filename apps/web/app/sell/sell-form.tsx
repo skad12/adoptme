@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { createListing, type CreateListingPayload } from "@/lib/api";
+import { nairaToMinor } from "@/lib/money";
 
 const fieldClass =
   "min-h-24 w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm outline-none ring-emerald-500/30 placeholder:text-zinc-400 focus:border-emerald-500 focus:ring-4 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50";
@@ -39,9 +40,9 @@ function optionalNumber(value: FormDataEntryValue | null) {
   return Number.isFinite(parsed) ? parsed : undefined;
 }
 
-function dollarsToCents(value: FormDataEntryValue | null) {
+function nairaInputToMinor(value: FormDataEntryValue | null) {
   const amount = optionalNumber(value);
-  return amount == null ? null : Math.round(amount * 100);
+  return amount == null ? null : nairaToMinor(amount);
 }
 
 function speciesFor(category: string) {
@@ -76,7 +77,7 @@ export function SellForm() {
       animalCategory,
       title: String(form.get("title") ?? ""),
       description: String(form.get("description") ?? ""),
-      priceCents: listingType === "SALE" ? dollarsToCents(form.get("price")) : null,
+      priceCents: listingType === "SALE" ? nairaInputToMinor(form.get("price")) : null,
       exchangePreferences: String(form.get("exchangePreferences") ?? ""),
       city: String(form.get("city") ?? ""),
       country: String(form.get("country") ?? ""),
@@ -145,7 +146,7 @@ export function SellForm() {
             </select>
           </label>
           <label className="space-y-2">
-            <span className="text-sm font-medium">Price in USD</span>
+            <span className="text-sm font-medium">Price in ₦ (Naira)</span>
             <Input name="price" type="number" min="0" step="1" placeholder={listingType === "SALE" ? "1200" : "Optional for swap"} disabled={listingType === "EXCHANGE"} />
           </label>
         </div>

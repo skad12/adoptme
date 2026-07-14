@@ -2,9 +2,11 @@ import Link from "next/link";
 import { fetchDonationCampaigns } from "@/lib/listing-data";
 import { Card } from "@/components/ui/card";
 
+import { formatMoney } from "@/lib/money";
+
 function money(cents: number | null) {
   if (cents == null) return "Open goal";
-  return new Intl.NumberFormat(undefined, { style: "currency", currency: "USD" }).format(cents / 100);
+  return formatMoney(cents);
 }
 
 export default async function DonationsPage() {
