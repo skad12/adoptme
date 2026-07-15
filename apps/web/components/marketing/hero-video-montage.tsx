@@ -15,6 +15,10 @@ const clips = [
     label: "Kitten play",
     src: "https://videos.pexels.com/video-files/855282/855282-hd_1280_720_25fps.mp4",
   },
+  {
+    label: "Puppy run",
+    src: "https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4",
+  },
 ];
 
 export function HeroVideoMontage() {
@@ -25,7 +29,7 @@ export function HeroVideoMontage() {
           key={clip.src}
           aria-label={clip.label}
           className="hero-montage-clip absolute inset-0 h-full w-full object-cover"
-          style={{ animationDelay: `${index * 8}s` }}
+          style={{ animationDelay: `${index * 8}s`, animationDuration: `${clips.length * 8}s` }}
           src={clip.src}
           autoPlay
           muted
@@ -34,6 +38,10 @@ export function HeroVideoMontage() {
           preload={index === 0 ? "auto" : "metadata"}
         />
       ))}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 z-[1] bg-[radial-gradient(circle_at_70%_30%,rgb(255_209_0_/_0.12),transparent_42%)]"
+      />
     </div>
   );
 }

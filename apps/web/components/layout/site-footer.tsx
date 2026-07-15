@@ -3,18 +3,14 @@ import { PawPrint } from "lucide-react";
 
 export function SiteFooter() {
   return (
-    <footer className="relative overflow-hidden border-t border-[var(--ui-border)] bg-[color-mix(in_srgb,var(--ui-surface-solid)_88%,transparent)] py-14 text-sm text-[var(--ui-muted)] backdrop-blur-sm">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--ui-primary)]/40 to-transparent"
-      />
+    <footer className="relative overflow-hidden border-t border-[var(--ui-border)] bg-[var(--ui-mist)] py-14 text-sm text-[var(--ui-muted)]">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-[1.3fr_0.8fr_0.8fr_0.8fr_0.8fr] lg:px-8">
         <div className="space-y-5">
-          <Link href="/" className="inline-flex items-center gap-2.5 font-semibold text-[var(--ui-ink)]">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-[var(--ui-primary)] to-[var(--ui-primary-bright)] text-white shadow-md shadow-[color-mix(in_srgb,var(--ui-primary)_30%,transparent)]">
+          <Link href="/" className="inline-flex items-center gap-2.5 text-[var(--ui-ink)]">
+            <span className="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--ui-primary)] text-white">
               <PawPrint className="h-5 w-5" aria-hidden />
             </span>
-            AdoptMe
+            <span className="ui-display text-xl font-semibold">AdoptMe</span>
           </Link>
           <p className="max-w-xs leading-relaxed">
             Shop, adopt, and book pet services across Nigeria — supplies, marketplace listings, welfare-first adoption, and expert care.
@@ -24,7 +20,7 @@ export function SiteFooter() {
               Shop now
             </Link>
             <Link
-              className="inline-flex rounded-full border border-[var(--ui-border-strong)] bg-[var(--ui-surface-solid)] px-4 py-2 text-xs font-semibold text-[var(--ui-ink)] transition hover:bg-[var(--ui-primary-soft)]"
+              className="inline-flex rounded-full bg-[var(--ui-accent)] px-4 py-2 text-xs font-semibold text-[var(--ui-ink)]"
               href="/rewards"
             >
               PawRewards
@@ -87,7 +83,7 @@ function FooterCol({ title, links }: { title: string; links: [string, string][] 
       <ul className="mt-4 space-y-2.5">
         {links.map(([href, label]) => (
           <li key={href}>
-            <Link className="transition hover:text-[var(--ui-primary)]" href={href}>
+            <Link className="transition hover:text-[var(--ui-ink)]" href={href}>
               {label}
             </Link>
           </li>

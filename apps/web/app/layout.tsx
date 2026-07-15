@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { Fredoka, Geist_Mono, Plus_Jakarta_Sans, Readex_Pro } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/providers";
 import { AppChrome } from "@/components/layout/app-chrome";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const readex = Readex_Pro({
+  variable: "--font-readex",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const fredoka = Fredoka({
+  variable: "--font-fredoka",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const geistMono = Geist_Mono({
@@ -42,7 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${plusJakarta.variable} min-h-screen bg-background antialiased`}>
+      <body
+        className={`${readex.variable} ${fredoka.variable} ${geistMono.variable} ${plusJakarta.variable} min-h-screen bg-background antialiased`}
+      >
         <Providers>
           <AppChrome>{children}</AppChrome>
         </Providers>

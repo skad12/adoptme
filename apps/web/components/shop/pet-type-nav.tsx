@@ -12,8 +12,8 @@ export function PetTypeNav({ petTypes, active }: { petTypes: PetType[]; active?:
           className={cn(
             "rounded-full px-4 py-2 text-sm font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--ui-primary)]",
             active === pet.slug
-              ? "bg-gradient-to-r from-[var(--ui-primary)] to-[var(--ui-primary-bright)] text-white shadow-md shadow-[color-mix(in_srgb,var(--ui-primary)_28%,transparent)]"
-              : "border border-[var(--ui-border)] bg-[var(--ui-surface-solid)] text-[var(--ui-ink)] hover:bg-[var(--ui-primary-soft)] hover:text-[var(--ui-primary)]",
+              ? "bg-[var(--ui-accent)] text-[var(--ui-ink)]"
+              : "border border-[var(--ui-border)] bg-[var(--ui-surface-solid)] text-[var(--ui-ink)] hover:bg-[var(--ui-mist)]",
           )}
         >
           {PET_TYPE_LABELS[pet.slug as PetTypeSlug] ?? pet.name}
@@ -27,8 +27,8 @@ export function CategoryLinks({ petType, categories }: { petType: string; catego
   return (
     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {categories.map((cat) => (
-        <div key={cat.slug} className="ui-glass p-5">
-          <Link href={`/shop/${petType}/${cat.slug}`} className="text-sm font-semibold text-[var(--ui-primary)] hover:underline">
+        <div key={cat.slug} className="rounded-[1.25rem] border border-[var(--ui-border)] bg-[var(--ui-mist)] p-5">
+          <Link href={`/shop/${petType}/${cat.slug}`} className="text-sm font-semibold text-[var(--ui-ink)] hover:underline">
             {cat.name}
           </Link>
           <ul className="mt-3 space-y-1.5">
